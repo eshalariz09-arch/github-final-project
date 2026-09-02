@@ -1,56 +1,32 @@
-# Contributing to Simple Interest Calculator
+# Contributing to This Project
 
-First off, thank you for considering contributing to this project! 🎉
+Thank you for considering contributing to this project!
 
 All contributions, bug reports, bug fixes, documentation improvements,
 enhancements, and ideas are welcome.
 
-## How Can I Contribute?
-
-### Reporting Bugs
-
-If you find a bug, please open an issue and include:
-
-- A clear and descriptive title
-- Steps to reproduce the problem
-- Expected behavior vs. actual behavior
-- Screenshots, if applicable
-
-### Suggesting Enhancements
-
-Enhancement suggestions are tracked as GitHub issues. When creating one, include:
-
-- A clear and descriptive title
-- A detailed description of the suggested enhancement
-- Why this enhancement would be useful
-
-### Submitting Changes (Pull Requests)
+## How to Contribute
 
 1. Fork the repository
-2. Create a new branch (`git checkout -b feature/your-feature-name`)
-3. Make your changes
-4. Test your changes to ensure everything works as expected
-5. Commit your changes with a clear commit message
-6. Push to your branch (`git push origin feature/your-feature-name`)
-7. Open a Pull Request describing the changes you made
+2. Create a new branch for your changes (`git checkout -b feature-name`)
+3. Make your changes and commit them (`git commit -m "Description of changes"`)
+4. Push your branch to your fork (`git push origin feature-name`)
+5. Open a Pull Request describing your changes
 
-### Documentation Improvements
+## Reporting Bugs
 
-Improvements to the README, code comments, or this CONTRIBUTING guide are
-always welcome and appreciated.
+If you find a bug, please open an issue describing:
+
+- What you expected to happen
+- What actually happened
+- Steps to reproduce the issue
 
 ## Code Style
 
-- Keep code clean, readable, and well-commented
-- Follow the existing formatting conventions used in the project
+Please keep code clean, readable, and consistent with the existing style
+in the project.
 
-## Code of Conduct
+## Questions
 
-This project follows a [Code of Conduct](CODE_OF_CONDUCT.md). By participating,
-you are expected to uphold this code.
-
-## Questions?
-
-Feel free to open an issue if you have any questions about contributing.
-
-Thank you for helping improve this project! 🙌
+If you have any questions, feel free to open an issue and we'll be happy
+to help.
