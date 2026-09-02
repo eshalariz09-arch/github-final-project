@@ -1,298 +1,122 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Interest Calculator</title>
+<style>
+  * {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
 
-    <title>Saba Liaquat - Portfolio</title>
+  body {
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  .calculator {
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 320px;
+  }
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+  h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+  }
+
+  input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+
+  #result {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #222;
+  }
+</style>
 </head>
+<body>
 
-<body id="home">
+<div class="calculator">
+  <h2>Simple Interest Calculator</h2>
 
-    <!-- =========================
-         TOP MENU / NAVIGATION
-    ========================== -->
+  <label for="principal">Principal Amount</label>
+  <input type="number" id="principal" placeholder="Enter principal amount">
 
-    <header>
+  <label for="rate">Rate of Interest (%)</label>
+  <input type="number" id="rate" placeholder="Enter rate of interest">
 
-        <!-- Required profile_name class -->
-        <div class="profile_name">
-            Saba Liaquat
-        </div>
+  <label for="time">Time (Years)</label>
+  <input type="number" id="time" placeholder="Enter time in years">
 
-        <!-- Required topmenu class -->
-        <nav class="topmenu">
+  <button onclick="calculateInterest()">Calculate</button>
 
-            <a href="#about">About Me</a>
+  <div id="result"></div>
+</div>
 
-            <a href="#projects">Project Details</a>
+<script>
+  function calculateInterest() {
+    const principal = parseFloat(document.getElementById("principal").value);
+    const rate = parseFloat(document.getElementById("rate").value);
+    const time = parseFloat(document.getElementById("time").value);
 
-            <a href="#skills">Skills</a>
+    const resultDiv = document.getElementById("result");
 
-            <a href="#recommendations">Recommendations</a>
+    if (isNaN(principal) || isNaN(rate) || isNaN(time)) {
+      resultDiv.innerHTML = "Please fill all fields with valid numbers.";
+      resultDiv.style.color = "red";
+      return;
+    }
 
-        </nav>
+    // Simple Interest formula: SI = (P * R * T) / 100
+    const simpleInterest = (principal * rate * time) / 100;
+    const totalAmount = principal + simpleInterest;
 
-    </header>
-
-
-    <!-- =========================
-         ABOUT ME
-    ========================== -->
-
-    <section id="about" class="about-section">
-
-        <div class="profile-image">
-
-            <img
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=500&q=80"
-                alt="Saba Liaquat Profile Picture">
-
-        </div>
-
-        <div class="about-content">
-
-            <h1>
-                Hi, I'm <span>Saba Liaquat</span>
-            </h1>
-
-            <h2>
-                Web Developer & Tech Enthusiast
-            </h2>
-
-            <p>
-                I am Saba Liaquat, a passionate web developer focused on
-                building modern, responsive, and user-friendly web
-                applications. I enjoy creating useful digital solutions
-                and continuously improving my technical skills.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         SKILLS
-    ========================== -->
-
-    <section id="skills" class="skills-section">
-
-        <h2>Skills</h2>
-
-        <div class="skills-container">
-
-            <!-- Skill 1 -->
-            <div class="skill">
-
-                <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                    alt="HTML5 Logo">
-
-                <h3>HTML5</h3>
-
-            </div>
-
-
-            <!-- Skill 2 -->
-            <div class="skill">
-
-                <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                    alt="CSS3 Logo">
-
-                <h3>CSS3</h3>
-
-            </div>
-
-
-            <!-- NEW SKILL 1 -->
-            <div class="skill">
-
-                <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                    alt="React Logo">
-
-                <h3>React</h3>
-
-            </div>
-
-
-            <!-- NEW SKILL 2 -->
-            <div class="skill">
-
-                <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-                    alt="Python Logo">
-
-                <h3>Python</h3>
-
-            </div>
-
-
-            <!-- NEW SKILL 3 -->
-            <div class="skill">
-
-                <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-                    alt="GitHub Logo">
-
-                <h3>Git & GitHub</h3>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         PROJECTS
-    ========================== -->
-
-    <section id="projects" class="projects-section">
-
-        <h2>Project Details</h2>
-
-        <div class="projects-container">
-
-            <!-- Project 1 -->
-            <div class="project">
-
-                <h3>Electronic Marketplace</h3>
-
-                <p>
-                    An e-commerce application where users can browse
-                    electronic products, explore categories, and manage
-                    their shopping cart.
-                </p>
-
-            </div>
-
-
-            <!-- Project 2 -->
-            <div class="project">
-
-                <h3>Student Management Portal</h3>
-
-                <p>
-                    A web-based system for managing student records,
-                    course enrollment, and academic information.
-                </p>
-
-            </div>
-
-
-            <!-- Project 3 -->
-            <div class="project">
-
-                <h3>Personal Portfolio Web App</h3>
-
-                <p>
-                    A responsive portfolio website showcasing skills,
-                    projects, achievements, and professional information.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         RECOMMENDATIONS
-    ========================== -->
-
-    <section id="recommendations" class="recommendations-section">
-
-        <h2>Recommendations</h2>
-
-        <div id="recommendation-list">
-
-            <!-- Recommendation 1 -->
-            <div class="recommendation">
-
-                <p>
-                    "Saba is an exceptional developer with strong
-                    problem-solving skills and a great eye for clean code."
-                </p>
-
-            </div>
-
-
-            <!-- Recommendation 2 -->
-            <div class="recommendation">
-
-                <p>
-                    "Working alongside Saba was wonderful. She consistently
-                    delivers quality work and collaborates seamlessly."
-                </p>
-
-            </div>
-
-
-            <!-- Recommendation 3 -->
-            <div class="recommendation">
-
-                <p>
-                    "Saba shows deep technical focus and a strong dedication
-                    to learning modern web technologies."
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- Recommendation Form -->
-
-        <div class="recommendation-form">
-
-            <h3>Leave a Recommendation</h3>
-
-            <form id="recommendationForm">
-
-                <textarea
-                    id="newRecommendation"
-                    placeholder="Write your recommendation here..."
-                    required></textarea>
-
-                <button type="submit">
-                    Submit Recommendation
-                </button>
-
-            </form>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         HOME ICON
-    ========================== -->
-
-    <a href="#home" class="iconbutton" aria-label="Home">
-
-        <i class="fa-solid fa-house"></i>
-
-    </a>
-
-
-    <!-- JavaScript -->
-    <script src="script.js"></script>
+    resultDiv.style.color = "#222";
+    resultDiv.innerHTML =
+      "Simple Interest: " + simpleInterest.toFixed(2) + "<br>" +
+      "Total Amount: " + totalAmount.toFixed(2);
+  }
+</script>
 
 </body>
-
 </html>
-
