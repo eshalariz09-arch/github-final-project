@@ -1,15 +1,13 @@
-Simple Interest Calculator
+Simple interesting Calculator
 
 ## Description
 
 A simple web-based calculator that calculates simple interest based on the principal amount, rate of interest, and time period.
 
-## Formula
+ Formula
 
 Simple Interest = (P × R × T) / 100
-
 Where:
-
 - P = Principal amount
 - R = Rate of interest
 - T = Time period
