@@ -1,6 +1,22 @@
+ HEAD
 # Simple Interest Calculator
 
 A beginner-level web app built with HTML, CSS, and JavaScript that calculates simple interest based on user input.
+
+Simple interst Calculator
+
+## Description
+
+A simple web-based calculator that calculates simple interest based on the principal amount, rate of interest, and time period.
+
+ Formula
+
+Simple Interest = (P × R × T) / 100
+Where:
+- P = Principal amount
+- R = Rate of interest
+- T = Time period
+bug-fix-typo
 
 ## Features
 - Takes Principal Amount, Rate of Interest, and Time (in years) as input
